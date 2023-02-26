@@ -15,6 +15,11 @@ public class UserController {
         return "name";
     }
 
+    /**
+     * 查询用户信息
+     * @param userReq
+     * @return
+     */
     @PostMapping(value = "/query")
     public Result<UserVo> query(@RequestBody UserReq userReq) {
         UserVo userVo = UserConverter.INSTANCE.userReqConverterUserVo(userReq);
